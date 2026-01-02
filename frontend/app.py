@@ -15,33 +15,73 @@ st.title("📚 Library Management System")
 
 # ------------------ LOGIN ------------------
 if not st.session_state.logged_in:
-    st.subheader("Login")
+    st.title("📚 Library Management System")
 
-    username = st.text_input("Username")
-    password = st.text_input("Password", type="password")
+    signin_tab, signup_tab = st.tabs(["Sign In", "Sign Up"])
 
-    if st.button("Login"):
-        try:
-            response = requests.post(
-                f"{BASE_URL}/login",
-                json={
-                    "username": username,
-                    "password": password
-                }
-            )
+    # ---------------- SIGN IN ----------------
+    with signin_tab:
+        st.subheader("Sign In")
 
-            if response.status_code == 200:
-                data = response.json()
-                st.session_state.logged_in = True
-                st.session_state.user_id = data["user_id"]
-                st.success("Login successful")
-                st.rerun()
+        username = st.text_input("Username", key="signin_username")
+        password = st.text_input("Password", type="password", key="signin_password")
+
+        if st.button("Sign In"):
+            try:
+                response = requests.post(
+                    f"{BASE_URL}/login",
+                    json={
+                        "username": username,
+                        "password": password
+                    }
+                )
+
+                if response.status_code == 200:
+                    data = response.json()
+                    st.session_state.logged_in = True
+                    st.session_state.user_id = data["user_id"]
+                    st.success("Login successful")
+                    st.rerun()
+                else:
+                    st.error("Invalid credentials")
+
+            except requests.exceptions.RequestException:
+                st.error("Backend not reachable")
+
+    # ---------------- SIGN UP ----------------
+    with signup_tab:
+        st.subheader("Sign Up")
+
+        new_username = st.text_input("Username", key="signup_username")
+        new_email = st.text_input("Email", key="signup_email")
+        new_password = st.text_input("Password", type="password", key="signup_password")
+        confirm_password = st.text_input(
+            "Confirm Password", type="password", key="signup_confirm"
+        )
+
+        if st.button("Create Account"):
+            if new_password != confirm_password:
+                st.error("Passwords do not match")
+            elif not new_username or not new_email or not new_password:
+                st.error("All fields are required")
             else:
-                st.error("Invalid credentials")
+                try:
+                    response = requests.post(
+                        f"{BASE_URL}/signup",
+                        json={
+                            "username": new_username,
+                            "email": new_email,
+                            "password": new_password
+                        }
+                    )
 
-        except requests.exceptions.RequestException:
-            st.error("Backend not reachable")
+                    if response.status_code == 201:
+                        st.success("Account created successfully. Please sign in.")
+                    else:
+                        st.error("Signup failed")
 
+                except requests.exceptions.RequestException:
+                    st.error("Backend not reachable")
 
 # ------------------ MAIN APP ------------------
 if st.session_state.logged_in:
