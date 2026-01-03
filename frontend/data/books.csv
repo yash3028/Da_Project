@@ -1,7 +1,0 @@
-book_id,title,author,genre,is_available,borrow_count
-101,Clean Code,Robert Martin,Technology,Yes,150
-102,1984,George Orwell,Fiction,No,180
-103,Sapiens,Yuval Noah Harari,History,Yes,170
-104,Inferno,Dan Brown,Fiction,Yes,160
-105,Machine Learning Yearning,Andrew Ng,Technology,No,140
-
