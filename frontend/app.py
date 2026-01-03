@@ -4,14 +4,12 @@ import requests
 
 st.set_page_config(page_title="Library Management System", layout="wide")
 
-BASE_URL = "http://localhost:5000/api"  # confirm this with your backend teammate
+BASE_URL = "http://localhost:3001/api/auth"  # confirm this with your backend teammate
 
 # ------------------ SESSION STATE ------------------
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
-
-
-st.title("📚 Library Management System")
+    st.title("📚 Library Management System")
 
 # ------------------ LOGIN ------------------
 if not st.session_state.logged_in:
@@ -25,7 +23,7 @@ if not st.session_state.logged_in:
 
         username = st.text_input("Username", key="signin_username")
         password = st.text_input("Password", type="password", key="signin_password")
-
+        
         if st.button("Sign In"):
             try:
                 response = requests.post(
@@ -39,7 +37,7 @@ if not st.session_state.logged_in:
                 if response.status_code == 200:
                     data = response.json()
                     st.session_state.logged_in = True
-                    st.session_state.user_id = data["user_id"]
+
                     st.success("Login successful")
                     st.rerun()
                 else:
@@ -58,7 +56,7 @@ if not st.session_state.logged_in:
         confirm_password = st.text_input(
             "Confirm Password", type="password", key="signup_confirm"
         )
-
+        payload = {"username": new_username, "email": new_email, "password": new_password}
         if st.button("Create Account"):
             if new_password != confirm_password:
                 st.error("Passwords do not match")
@@ -67,21 +65,19 @@ if not st.session_state.logged_in:
             else:
                 try:
                     response = requests.post(
-                        f"{BASE_URL}/signup",
-                        json={
-                            "username": new_username,
-                            "email": new_email,
-                            "password": new_password
-                        }
+                        f"{BASE_URL}/save-user",
+                        json=payload
                     )
 
                     if response.status_code == 201:
                         st.success("Account created successfully. Please sign in.")
                     else:
-                        st.error("Signup failed")
-
-                except requests.exceptions.RequestException:
-                    st.error("Backend not reachable")
+                        try:
+                            st.error(response.json().get("message", "Signup failed"))
+                        except Exception:
+                            st.error(f"Signup failed (status {response.status_code})")
+                except Exception as e:
+                    st.error(f"Request failed: {e}")
 
 # ------------------ MAIN APP ------------------
 if st.session_state.logged_in:
