@@ -1,7 +1,18 @@
-book_id,title,author,genre,is_available,borrow_count
-101,Clean Code,Robert Martin,Technology,Yes,150
-102,1984,George Orwell,Fiction,No,180
-103,Sapiens,Yuval Noah Harari,History,Yes,170
-104,Inferno,Dan Brown,Fiction,Yes,160
-105,Machine Learning Yearning,Andrew Ng,Technology,No,140
+book_id,title,author,genre,is_available,borrowed_by
+1,The Alchemist,Paulo Coelho,Fiction,Yes,
+2,Atomic Habits,James Clear,Self-Help,No,tejas
+3,Sapiens,Yuval Noah Harari,History,Yes,
+4,Clean Code,Robert C Martin,Technology,No,yash
+5,A Brief History of Time,Stephen Hawking,Science,Yes,
+6,The Lean Startup,Eric Ries,Business,No,ananya
+7,Harry Potter,J K Rowling,Fantasy,Yes,
+8,Deep Work,Cal Newport,Self-Help,Yes,
+9,Thinking Fast and Slow,Daniel Kahneman,Psychology,No,rahul
+10,Educated,Tara Westover,Biography,Yes,
+11,Python Crash Course,Eric Matthes,Education,Yes,
+12,1984,George Orwell,Fiction,No,priya
+13,The Pragmatic Programmer,Andrew Hunt,Technology,Yes,
+14,Man’s Search for Meaning,Viktor Frankl,Philosophy,Yes,
+15,Rich Dad Poor Dad,Robert Kiyosaki,Self-Help,No,arjun
+
 

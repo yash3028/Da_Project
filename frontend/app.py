@@ -4,12 +4,17 @@ import requests
 
 st.set_page_config(page_title="Library Management System", layout="wide")
 
-BASE_URL = "http://localhost:3001/api/auth"  # confirm this with your backend teammate
+BASE_URL = "http://localhost:3002/api/auth"  # confirm this with your backend teammate
 
 # ------------------ SESSION STATE ------------------
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
-    st.title("📚 Library Management System")
+    # st.title("📚 Library Management System")
+if "menu" not in st.session_state:
+    st.session_state.menu = "Genres"
+
+if "next_menu" not in st.session_state:
+    st.session_state.next_menu = None
 
 # ------------------ LOGIN ------------------
 if not st.session_state.logged_in:
@@ -37,6 +42,7 @@ if not st.session_state.logged_in:
                 if response.status_code == 200:
                     data = response.json()
                     st.session_state.logged_in = True
+                    st.session_state.menu = "Genres"
 
                     st.success("Login successful")
                     st.rerun()
@@ -83,10 +89,25 @@ if not st.session_state.logged_in:
 if st.session_state.logged_in:
     st.sidebar.title("📖 Menu")
 
+    menu_options = [
+    "Genres",
+    "Best Selling Books",
+    "Borrow Book",
+    "Top Authors",
+    "Education",
+    "Logout"
+]
+    if st.session_state.next_menu is not None:
+        st.session_state.menu = st.session_state.next_menu
+        st.session_state.next_menu = None
     menu = st.sidebar.radio(
-        "Navigation",
-        ["Genres", "Best Selling Books", "Logout"]
-    )
+    "Navigation",
+    menu_options,
+    index=menu_options.index(st.session_state.menu),
+    key="menu"   # 👈 critical
+)
+    
+
 
 
         # ---------- GENRES ----------
@@ -116,7 +137,8 @@ if st.session_state.logged_in:
 
         if st.button("Proceed to Borrow"):
             st.session_state.selected_book = selected_book
-            st.info("Now go to 'Borrow Book' from the sidebar")
+            st.session_state.next_menu = "Borrow Book"
+            st.rerun()
 
     # ---------- BEST SELLING BOOKS ----------
     elif menu == "Best Selling Books":

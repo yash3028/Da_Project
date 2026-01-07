@@ -1,6 +1,16 @@
-author_id,author_name,total_books,borrow_count
-1,Robert Martin,8,320
-2,George Orwell,6,290
-3,Yuval Noah Harari,5,260
-4,Dan Brown,7,310
-5,Andrew Ng,4,280
+author,borrow_count
+Paulo Coelho,12
+James Clear,20
+Yuval Noah Harari,15
+Robert C Martin,18
+Stephen Hawking,10
+Eric Ries,14
+J K Rowling,25
+Cal Newport,17
+Daniel Kahneman,13
+Tara Westover,9
+Eric Matthes,11
+George Orwell,19
+Andrew Hunt,8
+Viktor Frankl,7
+Robert Kiyosaki,16
