@@ -39,32 +39,9 @@ router.post(
   }
 );
 
-router.post("/budget", async (req, res) => {
-  try {
-    const response = await axios.post(
-      "http://localhost:5001/predict/budget",
-      req.body
-    );
-
-    res.json(response.data);
-  } catch (error) {
-    console.error("error");
-    res.status(500).json({ error: "ML service error" });
-  }
-});
-
-router.post("/duration", async (req, res) => {
-  try {
-    const response = await axios.post(
-      "http://localhost:5001/predict/duration",
-      req.body
-    );
-
-    res.json(response.data);
-  } catch (error) {
-    console.error("Duration ML error:");
-    res.status(500).json({ error: "ML duration service error" });
-  }
-});
+router.post(
+  "/borrow",
+  async (req: Request, res: Response, next: NextFunction) => {}
+);
 
 export = router;

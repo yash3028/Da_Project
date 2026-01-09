@@ -3,12 +3,13 @@ import express from "express";
 import cors from "cors";
 import { Application, NextFunction, Request, Response } from "express";
 import user_router from "./controller/userController";
-
+import book_csv_router from "./controller/bookController";
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 app.use("/api/auth", user_router);
+app.use("/api/books", book_csv_router);
 
 app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
   console.log(error.message);

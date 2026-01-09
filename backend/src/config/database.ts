@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
 import { users } from "../entity/user";
-
+import { BorrowedBook } from "../entity/BorrowedBook";
 export const data_source = new DataSource({
   type: "mysql",
   host: "localhost",
@@ -10,7 +10,7 @@ export const data_source = new DataSource({
   database: "library_management",
   synchronize: true,
   logging: true,
-  entities: [users],
+  entities: [users, BorrowedBook],
 });
 
 export const connect_to_database = async () => {
