@@ -1,18 +1,44 @@
 title,author,genre,is_available,borrowed_by
-The Alchemist,Paulo Coelho,Fiction,No,yash
-Atomic Habits,James Clear,Self-Help,No,tejas
-Sapiens,Yuval Noah Harari,History,No,yash
-Clean Code,Robert C Martin,Technology,No,yash
+The Alchemist,Paulo Coelho,Fiction,Yes,
+Atomic Habits,James Clear,Self-Help,No,
+Sapiens,Yuval Noah Harari,History,Yes,
+Clean Code,Robert C Martin,Technology,No,
 A Brief History of Time,Stephen Hawking,Science,No,yash
-The Lean Startup,Eric Ries,Business,No,ananya
+The Lean Startup,Eric Ries,Business,No,
 Harry Potter,J K Rowling,Fantasy,Yes,
 Deep Work,Cal Newport,Self-Help,Yes,
-Thinking Fast and Slow,Daniel Kahneman,Psychology,No,rahul
+Thinking Fast and Slow,Daniel Kahneman,Psychology,No,
 Educated,Tara Westover,Biography,Yes,
-Python Crash Course,Eric Matthes,Education,No,yash
-1984,George Orwell,Fiction,No,priya
-The Pragmatic Programmer,Andrew Hunt,Technology,No,yash
-Man’s Search for Meaning,Viktor Frankl,Philosophy,Yes,
-Rich Dad Poor Dad,Robert Kiyosaki,Self-Help,No,arjun
-undefined,undefined,undefined,undefined,
-undefined,undefined,undefined,undefined,
+Python Crash Course,Eric Matthes,Education,Yes,
+1984,George Orwell,Fiction,No,
+The Pragmatic Programmer,Andrew Hunt,Technology,Yes,
+Manâ€™s Search for Meaning,Viktor Frankl,Philosophy,Yes,
+Rich Dad Poor Dad,Robert Kiyosaki,Self-Help,No,
+To Kill a Mockingbird,Harper Lee,Fiction,No,yash
+The Great Gatsby,F Scott Fitzgerald,Fiction,No,
+The Catcher in the Rye,J D Salinger,Fiction,Yes,
+The Silent Patient,Alex Michaelides,Fiction,Yes,
+Educated,Tara Westover,Biography,Yes,
+Becoming,Michelle Obama,Biography,No,
+Steve Jobs,Walter Isaacson,Biography,Yes,
+Brief Answers to the Big Questions,Stephen Hawking,Science,Yes,
+Cosmos,Carl Sagan,Science,No,
+The Selfish Gene,Richard Dawkins,Science,Yes,
+Introduction to Algorithms,Thomas H Cormen,Technology,No,
+Design Patterns,Erich Gamma,Technology,Yes,
+Artificial Intelligence A Modern Approach,Stuart Russell,Technology,Yes,
+Guns Germs and Steel,Jared Diamond,History,Yes,
+The Silk Roads,Peter Frankopan,History,No,
+Team of Rivals,Doris Kearns Goodwin,History,Yes,
+The Hobbit,J R R Tolkien,Fantasy,Yes,
+A Game of Thrones,George R R Martin,Fantasy,No,
+The Name of the Wind,Patrick Rothfuss,Fantasy,Yes,
+Deep Work,Cal Newport,Self-Help,Yes,
+The Power of Habit,Charles Duhigg,Self-Help,No,
+How to Win Friends and Influence People,Dale Carnegie,Self-Help,Yes,
+Meditations,Marcus Aurelius,Philosophy,Yes,
+The Republic,Plato,Philosophy,No,
+Beyond Good and Evil,Friedrich Nietzsche,Philosophy,Yes,
+Python Crash Course,Eric Matthes,Education,Yes,
+Learning SQL,Alan Beaulieu,Education,Yes,
+Introduction to Machine Learning,Ethem Alpaydin,Education,No,
