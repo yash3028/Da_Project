@@ -1,18 +1,44 @@
-book_id,title,author,genre,is_available,borrowed_by
-1,The Alchemist,Paulo Coelho,Fiction,Yes,
-2,Atomic Habits,James Clear,Self-Help,No,tejas
-3,Sapiens,Yuval Noah Harari,History,Yes,
-4,Clean Code,Robert C Martin,Technology,No,yash
-5,A Brief History of Time,Stephen Hawking,Science,Yes,
-6,The Lean Startup,Eric Ries,Business,No,ananya
-7,Harry Potter,J K Rowling,Fantasy,Yes,
-8,Deep Work,Cal Newport,Self-Help,Yes,
-9,Thinking Fast and Slow,Daniel Kahneman,Psychology,No,rahul
-10,Educated,Tara Westover,Biography,Yes,
-11,Python Crash Course,Eric Matthes,Education,Yes,
-12,1984,George Orwell,Fiction,No,priya
-13,The Pragmatic Programmer,Andrew Hunt,Technology,Yes,
-14,Man’s Search for Meaning,Viktor Frankl,Philosophy,Yes,
-15,Rich Dad Poor Dad,Robert Kiyosaki,Self-Help,No,arjun
-
-
+book_id,title,author,genre,is_available
+1,The Alchemist,Paulo Coelho,Fiction,Yes
+2,Atomic Habits,James Clear,Self-Help,No
+3,Sapiens,Yuval Noah Harari,History,Yes
+4,Clean Code,Robert C Martin,Technology,No
+5,A Brief History of Time,Stephen Hawking,Science,Yes
+6,The Lean Startup,Eric Ries,Business,No
+7,Harry Potter,J K Rowling,Fantasy,Yes
+8,Deep Work,Cal Newport,Self-Help,Yes
+9,Thinking Fast and Slow,Daniel Kahneman,Psychology,No
+10,Educated,Tara Westover,Biography,Yes
+11,Python Crash Course,Eric Matthes,Education,Yes
+12,1984,George Orwell,Fiction,No
+13,The Pragmatic Programmer,Andrew Hunt,Technology,Yes
+14,Manâ€™s Search for Meaning,Viktor Frankl,Philosophy,Yes
+15,Rich Dad Poor Dad,Robert Kiyosaki,Self-Help,No
+16,To Kill a Mockingbird,Harper Lee,Fiction,Yes
+17,The Great Gatsby,F Scott Fitzgerald,Fiction,No
+18,The Catcher in the Rye,J D Salinger,Fiction,Yes
+19,The Silent Patient,Alex Michaelides,Fiction,Yes
+20,Educated,Tara Westover,Biography,Yes
+21,Becoming,Michelle Obama,Biography,No
+22,Steve Jobs,Walter Isaacson,Biography,Yes
+23,Brief Answers to the Big Questions,Stephen Hawking,Science,Yes
+24,Cosmos,Carl Sagan,Science,No
+25,The Selfish Gene,Richard Dawkins,Science,Yes
+26,Introduction to Algorithms,Thomas H Cormen,Technology,No
+27,Design Patterns,Erich Gamma,Technology,Yes
+28,Artificial Intelligence A Modern Approach,Stuart Russell,Technology,Yes
+29,Guns Germs and Steel,Jared Diamond,History,Yes
+30,The Silk Roads,Peter Frankopan,History,No
+31,Team of Rivals,Doris Kearns Goodwin,History,Yes
+32,The Hobbit,J R R Tolkien,Fantasy,Yes
+33,A Game of Thrones,George R R Martin,Fantasy,No
+34,The Name of the Wind,Patrick Rothfuss,Fantasy,Yes
+35,Deep Work,Cal Newport,Self-Help,Yes
+36,The Power of Habit,Charles Duhigg,Self-Help,No
+37,How to Win Friends and Influence People,Dale Carnegie,Self-Help,Yes
+38,Meditations,Marcus Aurelius,Philosophy,Yes
+39,The Republic,Plato,Philosophy,No
+40,Beyond Good and Evil,Friedrich Nietzsche,Philosophy,Yes
+41,Python Crash Course,Eric Matthes,Education,Yes
+42,Learning SQL,Alan Beaulieu,Education,Yes
+43,Introduction to Machine Learning,Ethem Alpaydin,Education,No
